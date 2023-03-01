@@ -1,15 +1,20 @@
 <script setup>
 import { ref } from "vue"
-const x = ref(true)
-function y() {
-  x.value = !x.value
-}
+const newWord = ref('') 
+const task = ref([
+  
+])
+const message = ref('')
 </script>
 
 <template>
-<div>
-  <button @click="y">文字が変わるよ</button>
-  <h1 v-if="x">もとの文字</h1>
-  <h1 v-else>かわった文字</h1>
-</div>
+<form>
+  <input v-modle="newWord">
+  <button>I'DO</button>
+</form>
+<ul>
+  <li >
+    {{ message.text }}
+  </li>
+</ul>
 </template>
