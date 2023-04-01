@@ -7,14 +7,14 @@ const tasks = ref([
 
 function addTask() {
   tasks.value.push({ text: newTask.value })
-
+  newTask.value = ''
 } 
 
 </script>
 
 <template>
 <form @submit.prevent="addTask">
-  <input v-modle="newTask">
+  <input v-model="newTask">
   <button>I'DO</button>
 </form>
 <ul>
