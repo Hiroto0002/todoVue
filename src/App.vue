@@ -15,12 +15,12 @@ function addTask() {
 <template>
 <form @submit.prevent="addTask">
   <input v-model="newTask">
-  <button>I'DO</button>
+  <button>NewTask</button>
 </form>
 <ul>
   <li v-for="task in tasks">
     {{ task.text }}
-    <button>NO</button>
+    <button>OK</button>
   </li>
 </ul>
 </template>
