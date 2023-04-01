@@ -5,14 +5,15 @@ const tasks = ref([
   {text: 'aaaaa'}
 ])
 
-function removeTask(task) {
-  tasks.value = tasks.value.filter((t) => )
-}
+function addTask() {
+  tasks.value.push({ text: newTask.value })
+
+} 
 
 </script>
 
 <template>
-<form @submit="addTask">
+<form @submit.prevent="addTask">
   <input v-modle="newTask">
   <button>I'DO</button>
 </form>
