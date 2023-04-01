@@ -1,20 +1,25 @@
 <script setup>
 import { ref } from "vue"
-const newWord = ref('') 
-const task = ref([
-  
+const newTask = ref('')
+const tasks = ref([
+  {text: 'aaaaa'}
 ])
-const message = ref('')
+
+function removeTask(task) {
+  tasks.value = tasks.value.filter((t) => )
+}
+
 </script>
 
 <template>
-<form>
-  <input v-modle="newWord">
+<form @submit="addTask">
+  <input v-modle="newTask">
   <button>I'DO</button>
 </form>
 <ul>
-  <li >
-    {{ message.text }}
+  <li v-for="task in tasks">
+    {{ task.text }}
+    <button>NO</button>
   </li>
 </ul>
 </template>
